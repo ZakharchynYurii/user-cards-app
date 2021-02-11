@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
+import './UserCard.css'
 
 class UserCard extends Component {
     render() {
-        let {user} = this.props;
+        let {user, cls} = this.props;
         let {id, name, username, email, phone, address} = user;
         let {street, suite, city} = address;
         return (
-            <div>
+            <div className={cls}>
                 <h2>User: {id} <span>{name}</span> <span>{username}</span></h2>
                 <div>
                     <div>

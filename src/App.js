@@ -9,9 +9,10 @@ class App extends Component {
         return (
             <div>
                 {
-                    users.map((user) => {
+                    users.map((user,index) => {
+                        let cls = index % 2 ? 'even' : 'odd';
                         return(
-                            <UserCard key={user.id} user={user}/>
+                            <UserCard cls={cls} key={user.id} user={user}/>
                         )
                     })
                 }
